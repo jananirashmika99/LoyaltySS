@@ -1,0 +1,64 @@
+
+<div class="image">
+     <!DOCTYPE html>
+    <html>
+         <body>
+        <div class="container h-100">
+            <div class="d-flex justify-content-center h-100">
+                <div class="user_card">
+                    <div class="d-flex justify-content-center">
+                        <div class="brand_logo_container">
+                            <img src="'/../../assets/images/login_user.jpg" class="brand_logo" alt="Logo">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center form_container">
+                        <form #userForm="ngForm">
+                           
+                            <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" #email="ngModel" name="email" ngModel [class.is-invalid]="email.invalid" class="form-control input_user " value="" placeholder="Email" required> 
+                             
+                                <!--small [class.d-none]="email.valid || email.untouched" >Email is required</small-->
+                            </div>
+                            <div class="input-group mb-2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" name="password" #password="ngModel" pattern="^\d{6}$" [class.is-invalid]="password.invalid " ngModel class="form-control input_pass" value="" placeholder="password" required>
+                              
+                              <div>
+                                 <!--small [class.d-none]="password.valid || password.untouched" >passwordmust be 10 numbers</small-->
+                              </div>  
+                            </div>
+                  
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customControlInline">
+                                    <label class="custom-control-label" for="customControlInline">Remember me</label>
+                                </div>
+                            </div>
+                                <div class="d-flex justify-content-center mt-3 login_container">
+                         <button type="login"  [disabled]="userForm.form.invalid"name="button" class="btn btn-danger">Login</button>
+                       </div>
+                        </form>
+                    </div>
+            
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-center links">
+                            Don't have an account? <a href="http://localhost:49865/registration" class="ml-2">Sign Up</a>
+                        </div>
+                        <div class="d-flex justify-content-center links">
+                            <a href="#">Forgot your password?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+    
+ </div>
+
+   

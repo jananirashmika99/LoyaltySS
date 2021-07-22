@@ -1,0 +1,37 @@
+.image{
+    height:43em; background-size:cover; width:auto;
+    background-image:url('/../../assets/images/regbg.jpg');
+    background-position:50% 50%;
+  }
+
+.user-card .card-block {
+    text-align: center;
+}
+
+.card .card-block {
+    padding: 25px;
+}
+
+.img-radius {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.f-w-600 {
+    font-weight: 600;
+}
+
+.user-card .card-block .activity-leval li.active {
+    background-color: yellowgreen;
+}
+
+.user-card .card-block .activity-leval li {
+    display: inline-block;
+    width: 15%;
+    height: 4px;
+    margin: 0 3px;
+    background-color: rgb(12, 84, 151);
+}
+
+
