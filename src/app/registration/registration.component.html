@@ -12,20 +12,21 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center form_container">
-                        <form #userForm="ngForm"  (ngSubmit)="onSubmit"novalidate>
+                        <form #userForm="ngForm"  (ngSubmit)="onClickSubmit(userForm.value)" >
                             <hr />
                           
                             <div class="input-group mb-3">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
-                                <input type="text" name="companyname" #companyname="ngModel"  ngModel [class.is-invalid]="companyname.invalid" class="form-control input_user" value=""  required [(ngModel)]="userModel.name">
+                               
+                                  <input type="text" name="companyname" #companyname="ngModel"  ngModel [class.is-invalid]="companyname.invalid" class="form-control input_user" value=""  required [(ngModel)]="userModel.name">
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
-                                <input type="text" name="email"#email="ngModel"  ngModel [class.is-invalid]="email.invalid" class="form-control input_user" value="" [(ngModel)]="userModel.email" required>
+                                <input type="text" name="email" #email="ngModel"  ngModel [class.is-invalid]="email.invalid" class="form-control input_user" value="" [(ngModel)]="userModel.email" required>
                             </div>
                             <div class="input-group mb-2">
                                 <div class="input-group-append">
@@ -45,9 +46,10 @@
                             </div>
                           
                                 <div class="d-flex justify-content-center mt-3 login_container">
-                         <button type="submit" [disabled]="userForm.form.invalid" name="onSubmit" class="btn btn-danger" type="onsubmit">Register</button>
+                         <button type="submit" [disabled]="userForm.form.invalid" name="onSubmit" class="btn btn-danger">Register</button>
                        </div>
                         </form>
+                      
                     </div>
             
                   

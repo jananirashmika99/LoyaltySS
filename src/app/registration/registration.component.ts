@@ -15,9 +15,12 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-onSubmit(){
-  console.log(this.userModel);
-}
+  onClickSubmit(result: { companyname: string; email: string; password: string; confirmpassword: string; }) {
+    console.log("You have companyname : " + result.companyname); 
+    console.log("You have email : " + result.email); 
+    console.log("You have password : " + result.password); 
+    console.log("You have confirmpassword : " + result.confirmpassword); 
+ }
 
 }
 
